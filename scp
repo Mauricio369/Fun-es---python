@@ -1,34 +1,15 @@
-# PROGRAMINHA PARA SOLUCIONAR SISTEMA DE EQUAÇÕES LINEARES COM NÚMEROS COMPLEXOS E COEFICIENTES INTEIROS OU DE PONTO FLUTUANTE
+Descrição em português:
 
-import numpy as np
-n=int(input("Digite quantas linhas e colunas na matriz: ")) #recebendo dimensão matriz NxN
+Como sou aluno de engenharia elétrica, dia após dia me encontro frente aos circuitos elétricos, os quais devo aplicar as leis de kirchoff 
+para obter o valor de algumas variáveis do circuito: tensão, corrente e potência. Frente a isso, percebi que torna-se muito repetitivo 
+ficar definindo matrizes em Python, e pensei em criar um sistema no qual o usuário insere os valores dos termos das matrizes de 
+coeficiente e de entrada, tanto sua parte real, como imaginária. Portanto, resolvi criar um código e a seguir demonstro com um exemplo- 
 
-A=np.zeros((n,n),np.complex128) #tornando uma matriz quadrada de N linhas e colunas, inseridas pelo usuário, e complexa;
-b=np.zeros((n,1),np.complex128) #definindo a matriz da entrada do sistema
-i=0 #iterador
-j=0 #iterador
-o=0 #iterador
+incompleto
 
-print("\n\nAgora você irá definir a matriz dos coeficientes do sistema!!!\n") ##iteração para definir os coeficientes de A
-for i in range(n):
-    for j in range(n):
-        print("Defina os coeficientes para A[{}][{}]:".format(i,j)) 
-        a=float(input("Parte real de A[{}][{}]: ".format(i,j)))
-        c=(float(input("Parte imaginária de A[{}][{}]: ".format(i,j))))*1j
-        A[i][j]=a+c
-        j=j+1
-        print('\n')
-    i=i+1 
+English description:
 
-print("\n\nAgora você irá definir a matriz das entradas do sistema!!!\n") #iteração para definir os coeficientes de b
-for o in range (n):
-    print("Defina os coeficientes para b[{}][{}]:".format(o,0))
-    a=float(input("Parte real de b[{}][{}]: ".format(o,0)))
-    c=(float(input("Parte imaginária de b[{}][{}]: ".format(o,0))))*1j
-    b[o][0]=a+c
-    o=o+1
-    print("\n")
-    
-print("\nVocê definiu as matrizes como sendo:\nA={}\nb={}".format(A,b))
-X=np.linalg.solve(A,b)
-x=print('\nX é a matriz solução do sistema e é dada por:\nX={}'.format(X))
+As an electrical engineering student, day after day, I am faced in solving electrics circuits, applying Kirchoff Laws to obtain values of 
+some variables as: voltage, current and power. Because of that, I noticed that it become very repetitive defining the matrices in Python, 
+and then I thought in creating a system in which the user insert the values of the coefficient and input matrices, both on the real part 
+and on the imaginary part. Therefore, i created a code and show an example - incomplet
